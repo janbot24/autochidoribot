@@ -123,7 +123,7 @@ async def megadl(bot, message: Message):
             guessedfilemime = filetype.guess(magapylol)  # Detecting file type
 
             await download_msg.edit("**Trying To Upload ...**")
-            safone = await message.reply_document(magapylol, progress=progress_for_pyrogram, progress_args=("**Uploading ...** \n", download_msg, start_time), reply_to_message_id=message.id)
+            safone = await message.reply_document(magapylol, progress=progress_for_pyrogram, progress_args=("**Uploading ...** \nPlease Have Patience ⌛", download_msg, start_time), reply_to_message_id=message.id)
             await safone.reply_text(
                 "**Cont. @Snowball_Official! \nThanks For Using Me 😘!**",
 
