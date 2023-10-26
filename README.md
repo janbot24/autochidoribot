@@ -58,11 +58,11 @@ del_thumb - Delete Thumbnail
 set_caption - Set A Custom Caption
 see_caption - See Your Custom Caption
 del_caption - Delete Custom Caption
-restart - To Rrstart The Bot (Admin Only)
-status - Check Bot Status (Admin Only)
-broadcast - Send Message To All Users (Admin Only)
 set_prefix - To Set Your Prefix
 set_suffix - To Set Your Suffix
 del_prefix - Delete Your Prefix
 del_suffix - Delete Your Suffix
+restart - To Rrstart The Bot (Admin Only)
+status - Check Bot Status (Admin Only)
+broadcast - Send Message To All Users (Admin Only)
 ```
