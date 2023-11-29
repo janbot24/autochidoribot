@@ -4,23 +4,23 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
+    API_ID    = os.environ.get("API_ID", "") #⚠️ Required
+    API_HASH  = os.environ.get("API_HASH", "") #⚠️ Required
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") #⚠️ Required
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", "") #⚠️ Required
    
     # database config
     DB_NAME = os.environ.get("DB_NAME","Snow_User_Data")     
-    DB_URL  = os.environ.get("DB_URL","")
+    DB_URL  = os.environ.get("DB_URL","") #⚠️ Required
  
     # other configs
     DOWNLOAD_LOCATION = "./MEGA_DOWNLOADS"
     TG_MAX_SIZE = 2040108421
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "https://telegra.ph/file/3b7050b8b5d918a00b490.jpg")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "Kdramaland_Official") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()] #⚠️ Required
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "") #⚠️ Required Username without @
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "")) #⚠️ Required
     FLOOD = int(os.environ.get("FLOOD", '10'))
     BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "1234567890").split())
 
