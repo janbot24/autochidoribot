@@ -7,36 +7,50 @@
     "env": {
         "API_ID": {
             "description": "Your APP ID From my.telegram.org ",
-            "value": ""
+            "value": "",
+            "required": true
         },
+
         "API_HASH": {
             "description": "Your API Hash From my.telegram.org ",
-            "value": ""
+            "value": "",
+            "required": true
         },
+
+        "BOT_TOKEN": {
+            "description": "Your Bot Token From @BotFather",
+            "value": "",
+            "required": true
+        },
+
         "FORCE_SUB": {
             "description": "Your force sub channel user name without [@] ",
             "value": "",
             "required": false 
         },
-        "BOT_TOKEN": {
-            "description": "Your Bot Token From @BotFather",
-            "value": ""
-        },
+
         "ADMIN": {
             "description":"Add Your User ID multiple is use space to split"
         },
+
         "LOG_CHANNEL": {
             "description":"Bot Log Sending Channel (just create a private channel and add bot to admin and take channel id to add this variable) ⚠️ id startswith -100 must",
-            "required": false           
+            "value": "",
+            "required": true
+            
         },
+
         "DB_URL": {
             "description": "Your Mongo DB URL Obtained From mongodb.com",
-            "value": ""
-        }
-        "START_PIC": {
-            "description": "Your Bot start cmd Pic from @MT_TelegraPH_Bot",
             "value": "",
-            "required": false
+            "required": true
+        },
+        
+        "START_PIC": {
+            "description": "Your Bot start cmd Pic from @HK_telegraph_BOT",
+            "value": "",
+            "required": true
+            
         }
     },
     "buildpacks": [
