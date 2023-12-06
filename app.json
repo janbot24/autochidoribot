@@ -26,7 +26,7 @@
         "FORCE_SUB": {
             "description": "Your force sub channel user name without [@] ",
             "value": "",
-            "required": false 
+            "required": true 
         },
 
         "ADMIN": {
