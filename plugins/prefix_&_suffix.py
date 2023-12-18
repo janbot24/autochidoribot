@@ -20,7 +20,7 @@ async def delete_prefix(client, message):
     prefix = await db.get_prefix(message.from_user.id)
     if not prefix:
         return await SnowDev.edit("__**😔 ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ᴘʀᴇꜰɪx**__")
-    await db.set_prefix(message.from_user.id, prefix=None)
+    await db.set_prefix(message.from_user.id, None)
     await SnowDev.edit("__**❌️ ᴘʀᴇꜰɪx ᴅᴇʟᴇᴛᴇᴅ**__")
 
 
@@ -54,7 +54,7 @@ async def delete_suffix(client, message):
     suffix = await db.get_suffix(message.from_user.id)
     if not suffix:
         return await SnowDev.edit("__**😔 ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ꜱᴜꜰꜰɪx**__")
-    await db.set_prefix(message.from_user.id, prefix=None)
+    await db.set_prefix(message.from_user.id, None)
     await SnowDev.edit("__**❌️ ꜱᴜꜰꜰɪx ᴅᴇʟᴇᴛᴇᴅ**__")
 
 
