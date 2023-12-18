@@ -9,7 +9,7 @@ async def add_caption(client, message):
         return await message.reply_text("**__Give The Prefix__\n\nExᴀᴍᴩʟᴇ:- `/set_prefix @Roofiverse`**")
     prefix = message.text.split(" ", 1)[1]
     SnowDev = await message.reply_text("Please Wait ...")
-    await db.set_prefix(message.from_user.id, prefix=prefix)
+    await db.set_prefix(message.from_user.id, prefix)
     await SnowDev.edit("__**✅ ᴘʀᴇꜰɪx ꜱᴀᴠᴇᴅ**__")
 
 
@@ -43,7 +43,7 @@ async def add_csuffix(client, message):
         return await message.reply_text("**__Give The Suffix__\n\nExᴀᴍᴩʟᴇ:- `/set_suffix @Roofiverse`**")
     suffix = message.text.split(" ", 1)[1]
     SnowDev = await message.reply_text("Please Wait ...")
-    await db.set_suffix(message.from_user.id, suffix=suffix)
+    await db.set_suffix(message.from_user.id, suffix)
     await SnowDev.edit("__**✅ ꜱᴜꜰꜰɪx ꜱᴀᴠᴇᴅ**__")
 
 
@@ -54,7 +54,7 @@ async def delete_suffix(client, message):
     suffix = await db.get_suffix(message.from_user.id)
     if not suffix:
         return await SnowDev.edit("__**😔 ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ꜱᴜꜰꜰɪx**__")
-    await db.set_prefix(message.from_user.id, None)
+    await db.set_suffix(message.from_user.id, None)
     await SnowDev.edit("__**❌️ ꜱᴜꜰꜰɪx ᴅᴇʟᴇᴛᴇᴅ**__")
 
 
