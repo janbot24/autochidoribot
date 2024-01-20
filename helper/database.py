@@ -18,7 +18,6 @@ class Database:
             caption=None,
             prefix=None,
             suffix=None,
-            doc_type=None
         )
 
     async def add_user(self, b, m):
@@ -70,45 +69,6 @@ class Database:
     async def get_suffix(self, id):
         user = await self.col.find_one({'_id': int(id)})
         return user.get('suffix', None)
-
-    async def set_doc_type(self, id, doc_type):
-        await self.col.update_one({'_id': int(id)}, {'$set': {'doc_type': doc_type}})
-
-    async def get_doc_type(self, id):
-        user = await self.col.find_one({'_id': int(id)})
-        return user.get('doc_type', None)
-
-    async def remove_ban(self, id):
-        ban_status = dict(
-            is_banned=False,
-            ban_duration=0,
-            banned_on=datetime.date.max.isoformat(),
-            ban_reason=''
-        )
-        await self.col.update_one({'id': id}, {'$set': {'ban_status': ban_status}})
-
-    async def ban_user(self, user_id, ban_duration, ban_reason):
-        ban_status = dict(
-            is_banned=True,
-            ban_duration=ban_duration,
-            banned_on=datetime.date.today().isoformat(),
-            ban_reason=ban_reason
-        )
-        await self.col.update_one({'id': user_id}, {'$set': {'ban_status': ban_status}})
-
-    async def get_ban_status(self, id):
-        default = dict(
-            is_banned=False,
-            ban_duration=0,
-            banned_on=datetime.date.max.isoformat(),
-            ban_reason=''
-        )
-        user = await self.col.find_one({'id': int(id)})
-        return user.get('ban_status', default)
-
-    async def get_all_banned_users(self):
-        banned_users = self.col.find({'ban_status.is_banned': True})
-        return banned_users
 
 
 db = Database(Config.DB_URL, Config.DB_NAME)
