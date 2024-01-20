@@ -9,7 +9,7 @@ class Config(object):
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") #⚠️ Required
    
     # database config
-    DB_NAME = os.environ.get("DB_NAME","UserData")     
+    DB_NAME = os.environ.get("DB_NAME","Snow_User_Data")     
     DB_URL  = os.environ.get("DB_URL","") #⚠️ Required
  
     # other configs
