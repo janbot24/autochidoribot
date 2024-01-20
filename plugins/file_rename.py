@@ -14,13 +14,11 @@ import time
 
 @Client.on_callback_query(filters.regex('rename'))
 async def rename(bot, update):
-    user_id = update.message.chat.id
-    date = update.message.date
     await update.message.delete()
     await update.message.reply_text("__𝙿𝚕𝚎𝚊𝚜𝚎 𝙴𝚗𝚝𝚎𝚛 𝙽𝚎𝚠 𝙵𝚒𝚕𝚎𝙽𝚊𝚖𝚎...__",
                                     reply_to_message_id=update.message.reply_to_message.id,
                                     reply_markup=ForceReply(True))\
-                                    
+
 
 
 @Client.on_message(filters.private & filters.reply)
@@ -49,7 +47,7 @@ async def refunc(client, message):
             button.append([InlineKeyboardButton(
                 "🎵 Aᴜᴅɪᴏ", callback_data="upload_audio")])
         await message.reply(
-            text=f"**Sᴇʟᴇᴄᴛ Tʜᴇ Oᴜᴛᴩᴜᴛ Fɪʟᴇ Tyᴩᴇ**\n**• Fɪʟᴇ Nᴀᴍᴇ :-**<code> {new_name} </code>",
+            text=f"**Sᴇʟᴇᴄᴛ Tʜᴇ Oᴜᴛᴩᴜᴛ Fɪʟᴇ Tyᴩᴇ**\n**• Fɪʟᴇ Nᴀᴍᴇ :-** <code> {new_name} </code>",
             reply_to_message_id=file.id,
             reply_markup=InlineKeyboardMarkup(button)
         )
@@ -57,7 +55,7 @@ async def refunc(client, message):
 
 @Client.on_callback_query(filters.regex("upload"))
 async def doc(bot, update):
-        
+
     prefix = await db.get_prefix(update.message.chat.id)
     suffix = await db.get_suffix(update.message.chat.id)
     new_name = update.message.text
@@ -68,29 +66,28 @@ async def doc(bot, update):
             shorted = new_filename_[:-4:]
             extension = new_filename_[-4::]
             new_filename = f"{prefix} {shorted} {suffix}{extension}"
-        
+
         elif prefix:
             shorted = new_filename_[:-4:]
             extension = new_filename_[-4::]
             new_filename = f"{prefix} {shorted}{extension}"
-        
+
         elif suffix:
             shorted = new_filename_[:-4:]
             extension = new_filename_[-4::]
             new_filename = f"{shorted} {suffix}{extension}"
-        
+
         else:
             new_filename = new_filename_
     except:
         await update.message.edit("⚠️ Something went wrong can't able to set Prefix or Suffix ☹️ \n\n❄️ Contact My Creator -> @Snowball_Official")
-    
-        
+
     file_path = f"downloads/{new_filename}"
     file = update.message.reply_to_message
 
     ms = await update.message.edit("⚠️__**Please wait...**__\n**Tʀyɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅɪɴɢ....**")
     try:
-        await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram, progress_args=("\n⚠️__**Please wait...**__\n\n☃️ **Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+        await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram, progress_args=("\n⚠️__**Please wait...**__\n\n❄️ **Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
     except Exception as e:
         return await ms.edit(e)
 
@@ -102,7 +99,6 @@ async def doc(bot, update):
     except:
         pass
     ph_path = None
-    user_id = int(update.message.chat.id)
     media = getattr(file, file.media.value)
     c_caption = await db.get_caption(update.message.chat.id)
     c_thumb = await db.get_thumbnail(update.message.chat.id)
