@@ -56,7 +56,8 @@
 
     "START_PIC": {
       "description": "Your Bot start cmd Pic from @HK_telegraph_BOT",
-      "value": ""
+      "value": "",
+      "required": false
     }
   },
   "buildpacks": [
