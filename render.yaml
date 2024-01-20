@@ -27,5 +27,3 @@ services:
         sync: false
       - key: ADMIN
         sync: false
-      - key: WEBHOOK
-        sync: false
