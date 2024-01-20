@@ -8,7 +8,7 @@ async def add_caption(client, message):
     if len(message.command) == 1:
         return await message.reply_text("**__Give The Prefix__\n\nExᴀᴍᴩʟᴇ:- `/set_prefix @Roofiverse`**")
     prefix = message.text.split(" ", 1)[1]
-    SnowDev = await message.reply_text("Please Wait ...")
+    SnowDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
     await db.set_prefix(message.from_user.id, prefix)
     await SnowDev.edit("__**✅ ᴘʀᴇꜰɪx ꜱᴀᴠᴇᴅ**__")
 
@@ -16,7 +16,7 @@ async def add_caption(client, message):
 @Client.on_message(filters.private & filters.command('del_prefix'))
 async def delete_prefix(client, message):
 
-    SnowDev = await message.reply_text("Please Wait ...")
+    SnowDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
     prefix = await db.get_prefix(message.from_user.id)
     if not prefix:
         return await SnowDev.edit("__**😔 ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ᴘʀᴇꜰɪx**__")
@@ -27,7 +27,7 @@ async def delete_prefix(client, message):
 @Client.on_message(filters.private & filters.command('see_prefix'))
 async def see_caption(client, message):
 
-    SnowDev = await message.reply_text("Please Wait ...")
+    SnowDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
     prefix = await db.get_prefix(message.from_user.id)
     if prefix:
         await SnowDev.edit(f"**ʏᴏᴜʀ ᴘʀᴇꜰɪx:-**\n\n`{prefix}`")
@@ -42,7 +42,7 @@ async def add_csuffix(client, message):
     if len(message.command) == 1:
         return await message.reply_text("**__Give The Suffix__\n\nExᴀᴍᴩʟᴇ:- `/set_suffix @Roofiverse`**")
     suffix = message.text.split(" ", 1)[1]
-    SnowDev = await message.reply_text("Please Wait ...")
+    SnowDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
     await db.set_suffix(message.from_user.id, suffix)
     await SnowDev.edit("__**✅ ꜱᴜꜰꜰɪx ꜱᴀᴠᴇᴅ**__")
 
@@ -50,7 +50,7 @@ async def add_csuffix(client, message):
 @Client.on_message(filters.private & filters.command('del_suffix'))
 async def delete_suffix(client, message):
 
-    SnowDev = await message.reply_text("Please Wait ...")
+    SnowDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
     suffix = await db.get_suffix(message.from_user.id)
     if not suffix:
         return await SnowDev.edit("__**😔 ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ꜱᴜꜰꜰɪx**__")
@@ -61,7 +61,7 @@ async def delete_suffix(client, message):
 @Client.on_message(filters.private & filters.command('see_suffix'))
 async def see_csuffix(client, message):
 
-    SnowDev = await message.reply_text("Please Wait ...")
+    SnowDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
     suffix = await db.get_suffix(message.from_user.id)
     if suffix:
         await SnowDev.edit(f"**ʏᴏᴜʀ ꜱᴜꜰꜰɪx:-**\n\n`{suffix}`")
