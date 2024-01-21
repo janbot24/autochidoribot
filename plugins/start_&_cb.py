@@ -59,10 +59,10 @@ async def cb_handler(client, query: CallbackQuery):
         await message.edit_text(text=text, disable_web_page_preview=True, reply_markup=markup)
 
     if data == "start":
-        await edit_message(Txt.START_TXT.format(query.from_user.mention), button_markup)
+        await message.edit_text(Txt.START_TXT.format(query.from_user.mention), button_markup)
     elif data in ["help", "about"]:
         text = Txt.HELP_TXT if data == "help" else Txt.ABOUT_TXT.format(client.mention)
-        await edit_message(text, back_markup)
+        await message.edit_text(text, back_markup)
     elif data == "close":
         try:
             await message.delete()
