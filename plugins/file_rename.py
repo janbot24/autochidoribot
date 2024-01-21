@@ -122,23 +122,32 @@ async def doc(bot, update):
     await ms.edit("⚠️__**Please wait...**__\n**Tʀyɪɴɢ Tᴏ Uᴩʟᴏᴀᴅɪɴɢ....**")
     type = update.data.split("_")[1]
     try:
-        # Use a dictionary to map the media type to the appropriate send method
-        send_method = {
-            "document": bot.send_document,
-            "video": bot.send_video,
-            "audio": bot.send_audio
-        }
-
-        await send_method[type](
-            update.message.chat.id,
-            document=file_path if type == "document" else None,
-            video=file_path if type == "video" else None,
-            audio=file_path if type == "audio" else None,
-            thumb=ph_path,
-            caption=caption,
-            duration=duration if type == "video" or type == "audio" else None,
-            progress=progress_for_pyrogram,
-            progress_args=("⚠️__**Please wait...**__\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+       if type == "document":
+            await bot.send_document(
+                update.message.chat.id,
+                document=file_path,
+                thumb=ph_path,
+                caption=caption,
+                progress=progress_for_pyrogram,
+                progress_args=("⚠️__**Please wait...**__\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+        elif type == "video":
+            await bot.send_video(
+                update.message.chat.id,
+                video=file_path,
+                caption=caption,
+                thumb=ph_path,
+                duration=duration,
+                progress=progress_for_pyrogram,
+                progress_args=("⚠️__**Please wait...**__\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+        elif type == "audio":
+            await bot.send_audio(
+                update.message.chat.id,
+                audio=file_path,
+                caption=caption,
+                thumb=ph_path,
+                duration=duration,
+                progress=progress_for_pyrogram,
+                progress_args=("⚠️__**Please wait...**__\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
     except Exception as e:
         os.remove(file_path)
         if ph_path:
