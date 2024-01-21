@@ -1,32 +1,27 @@
 from pyrogram import Client, filters
 from pyrogram.enums import MessageMediaType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply
-
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
-
 from helper.utils import progress_for_pyrogram, convert, humanbytes
 from helper.database import db
 from PIL import Image
 import os
 import time
 
-
+# Define a function to handle the 'rename' callback
 @Client.on_callback_query(filters.regex('rename'))
 async def rename(bot, update):
-    user_id = update.message.chat.id
-    date = update.message.date
     await update.message.delete()
     await update.message.reply_text("__𝙿𝚕𝚎𝚊𝚜𝚎 𝙴𝚗𝚝𝚎𝚛 𝙽𝚎𝚠 𝙵𝚒𝚕𝚎𝙽𝚊𝚖𝚎...__",
                                     reply_to_message_id=update.message.reply_to_message.id,
-                                    reply_markup=ForceReply(True))\
-                                    
+                                    reply_markup=ForceReply(True))
 
-
+# Define the main message handler for private messages with replies
 @Client.on_message(filters.private & filters.reply)
 async def refunc(client, message):
     reply_message = message.reply_to_message
-    if (reply_message.reply_markup) and isinstance(reply_message.reply_markup, ForceReply):
+    if isinstance(reply_message.reply_markup, ForceReply):
         new_name = message.text
         await message.delete()
         msg = await client.get_messages(message.chat.id, reply_message.id)
@@ -40,57 +35,56 @@ async def refunc(client, message):
             new_name = new_name + "." + extn
         await reply_message.delete()
 
-        button = [[InlineKeyboardButton(
-            "📁 Dᴏᴄᴜᴍᴇɴᴛ", callback_data="upload_document")]]
+        # Use a list to store the inline keyboard buttons
+        button = [
+            [InlineKeyboardButton("📁 Dᴏᴄᴜᴍᴇɴᴛ", callback_data="upload_document")]
+        ]
         if file.media in [MessageMediaType.VIDEO, MessageMediaType.DOCUMENT]:
-            button.append([InlineKeyboardButton(
-                "🎥 Vɪᴅᴇᴏ", callback_data="upload_video")])
+            button.append([InlineKeyboardButton("🎥 Vɪᴅᴇᴏ", callback_data="upload_video")])
         elif file.media == MessageMediaType.AUDIO:
-            button.append([InlineKeyboardButton(
-                "🎵 Aᴜᴅɪᴏ", callback_data="upload_audio")])
+            button.append([InlineKeyboardButton("🎵 Aᴜᴅɪᴏ", callback_data="upload_audio")])
+
+        # Use a single call to reply with both text and inline keyboard
         await message.reply(
-            text=f"**Sᴇʟᴇᴄᴛ Tʜᴇ Oᴜᴛᴩᴜᴛ Fɪʟᴇ Tyᴩᴇ**\n**• Fɪʟᴇ Nᴀᴍᴇ :-** **{new_name}** ",
+            text=f"**Sᴇʟᴇᴄᴛ Tʜᴇ Oᴜᴛᴩᴜᴛ Fɪʟᴇ Tyᴩᴇ**\n**• Fɪʟᴇ Nᴀᴍᴇ :-** <code> {new_name} </code>",
             reply_to_message_id=file.id,
             reply_markup=InlineKeyboardMarkup(button)
         )
 
-
+# Define the callback for the 'upload' buttons
 @Client.on_callback_query(filters.regex("upload"))
 async def doc(bot, update):
-        
+    # Extracting necessary information
     prefix = await db.get_prefix(update.message.chat.id)
     suffix = await db.get_suffix(update.message.chat.id)
     new_name = update.message.text
     new_filename_ = new_name.split(":-")[1]
 
     try:
+        # Construct the new filename based on prefix and suffix
         if prefix and suffix:
             shorted = new_filename_[:-4:]
             extension = new_filename_[-4::]
             new_filename = f"{prefix} {shorted} {suffix}{extension}"
-        
         elif prefix:
             shorted = new_filename_[:-4:]
             extension = new_filename_[-4::]
             new_filename = f"{prefix} {shorted}{extension}"
-        
         elif suffix:
             shorted = new_filename_[:-4:]
             extension = new_filename_[-4::]
             new_filename = f"{shorted} {suffix}{extension}"
-        
         else:
             new_filename = new_filename_
-    except:
-        await update.message.edit("⚠️ Something went wrong can't able to set Prefix or Suffix ☹️ \n\n❄️ Contact My Creator -> @Snowball_Official")
-    
-        
+    except Exception as e:
+        return await update.message.edit(f"⚠️ Something went wrong can't able to set Prefix or Suffix ☹️ \n\n❄️ Contact My Creator -> @Snowball_Official\nError: {e}")
+
     file_path = f"downloads/{new_filename}"
     file = update.message.reply_to_message
 
     ms = await update.message.edit("⚠️__**Please wait...**__\n**Tʀyɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅɪɴɢ....**")
     try:
-        await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram, progress_args=("\n⚠️__**Please wait...**__\n\n☃️ **Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+        await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram, progress_args=("\n⚠️__**Please wait...**__\n❄️ **Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
     except Exception as e:
         return await ms.edit(e)
 
@@ -102,7 +96,6 @@ async def doc(bot, update):
     except:
         pass
     ph_path = None
-    user_id = int(update.message.chat.id)
     media = getattr(file, file.media.value)
     c_caption = await db.get_caption(update.message.chat.id)
     c_thumb = await db.get_thumbnail(update.message.chat.id)
@@ -129,32 +122,23 @@ async def doc(bot, update):
     await ms.edit("⚠️__**Please wait...**__\n**Tʀyɪɴɢ Tᴏ Uᴩʟᴏᴀᴅɪɴɢ....**")
     type = update.data.split("_")[1]
     try:
-        if type == "document":
-            await bot.send_document(
-                update.message.chat.id,
-                document=file_path,
-                thumb=ph_path,
-                caption=caption,
-                progress=progress_for_pyrogram,
-                progress_args=("⚠️__**Please wait...**__\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
-        elif type == "video":
-            await bot.send_video(
-                update.message.chat.id,
-                video=file_path,
-                caption=caption,
-                thumb=ph_path,
-                duration=duration,
-                progress=progress_for_pyrogram,
-                progress_args=("⚠️__**Please wait...**__\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
-        elif type == "audio":
-            await bot.send_audio(
-                update.message.chat.id,
-                audio=file_path,
-                caption=caption,
-                thumb=ph_path,
-                duration=duration,
-                progress=progress_for_pyrogram,
-                progress_args=("⚠️__**Please wait...**__\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+        # Use a dictionary to map the media type to the appropriate send method
+        send_method = {
+            "document": bot.send_document,
+            "video": bot.send_video,
+            "audio": bot.send_audio
+        }
+
+        await send_method[type](
+            update.message.chat.id,
+            document=file_path if type == "document" else None,
+            video=file_path if type == "video" else None,
+            audio=file_path if type == "audio" else None,
+            thumb=ph_path,
+            caption=caption,
+            duration=duration if type == "video" or type == "audio" else None,
+            progress=progress_for_pyrogram,
+            progress_args=("⚠️__**Please wait...**__\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
     except Exception as e:
         os.remove(file_path)
         if ph_path:
