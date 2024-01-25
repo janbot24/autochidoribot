@@ -22,7 +22,7 @@ async def start(client, message):
         InlineKeyboardButton(
             '🌨️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/SnowDevs')
     ], [
-        InlineKeyboardButton('☃️ Aʙᴏᴜᴛ', callback_data='about'),
+        InlineKeyboardButton('❄️ Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('❗ Hᴇʟᴩ', callback_data='help')
     ]])
     if Config.START_PIC:
@@ -65,7 +65,7 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton(
                     '🌨️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/SnowDevs')
             ], [
-                InlineKeyboardButton('☃️ Aʙᴏᴜᴛ', callback_data='about'),
+                InlineKeyboardButton('❄️ Aʙᴏᴜᴛ', callback_data='about'),
                 InlineKeyboardButton('❗ Hᴇʟᴩ', callback_data='help')
             ]])
         )
