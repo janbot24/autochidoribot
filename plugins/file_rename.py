@@ -37,16 +37,19 @@ async def refunc(client, message):
 
         # Use a list to store the inline keyboard buttons
         button = [
-            [InlineKeyboardButton("📁 Dᴏᴄᴜᴍᴇɴᴛ", callback_data="upload_document")]
+            [InlineKeyboardButton(
+                "📁 Dᴏᴄᴜᴍᴇɴᴛ", callback_data="upload_document")]
         ]
         if file.media in [MessageMediaType.VIDEO, MessageMediaType.DOCUMENT]:
-            button.append([InlineKeyboardButton("🎥 Vɪᴅᴇᴏ", callback_data="upload_video")])
+            button.append([InlineKeyboardButton(
+                "🎥 Vɪᴅᴇᴏ", callback_data="upload_video")])
         elif file.media == MessageMediaType.AUDIO:
-            button.append([InlineKeyboardButton("🎵 Aᴜᴅɪᴏ", callback_data="upload_audio")])
+            button.append([InlineKeyboardButton(
+                "🎵 Aᴜᴅɪᴏ", callback_data="upload_audio")])
 
         # Use a single call to reply with both text and inline keyboard
         await message.reply(
-            text=f"**Sᴇʟᴇᴄᴛ Tʜᴇ Oᴜᴛᴩᴜᴛ Fɪʟᴇ Tyᴩᴇ**\n**• Fɪʟᴇ Nᴀᴍᴇ :-** <code> {new_name} </code>",
+            text=f"**Sᴇʟᴇᴄᴛ Tʜᴇ Oᴜᴛᴩᴜᴛ Fɪʟᴇ Tyᴩᴇ**\n**• Fɪʟᴇ Nᴀᴍᴇ :-** `{new_name}`",
             reply_to_message_id=file.id,
             reply_markup=InlineKeyboardMarkup(button)
         )
@@ -84,7 +87,7 @@ async def doc(bot, update):
 
     ms = await update.message.edit("⚠️__**Please wait...**__\n\n**Tʀyɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅɪɴɢ....**")
     try:
-        await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram, progress_args=("\n⚠️__**Please wait...**__\n❄️ **Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+        path = await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram, progress_args=("\n⚠️__**Please wait...**__\n❄️ **Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
     except Exception as e:
         return await ms.edit(e)
 
@@ -122,7 +125,7 @@ async def doc(bot, update):
     await ms.edit("⚠️__**Please wait...**__\n\n**Tʀyɪɴɢ Tᴏ Uᴩʟᴏᴀᴅɪɴɢ....**")
     type = update.data.split("_")[1]
     try:
-       if type == "document":
+        if type == "document":
             await bot.send_document(
                 update.message.chat.id,
                 document=file_path,
@@ -130,7 +133,7 @@ async def doc(bot, update):
                 caption=caption,
                 progress=progress_for_pyrogram,
                 progress_args=("⚠️__**Please wait...**__\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
-       elif type == "video":
+        elif type == "video":
             await bot.send_video(
                 update.message.chat.id,
                 video=file_path,
@@ -139,7 +142,7 @@ async def doc(bot, update):
                 duration=duration,
                 progress=progress_for_pyrogram,
                 progress_args=("⚠️__**Please wait...**__\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
-       elif type == "audio":
+        elif type == "audio":
             await bot.send_audio(
                 update.message.chat.id,
                 audio=file_path,
