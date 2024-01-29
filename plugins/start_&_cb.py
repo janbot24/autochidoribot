@@ -18,11 +18,11 @@ async def start(client, message):
     await db.add_user(client, message)
     button = InlineKeyboardMarkup([[
         InlineKeyboardButton(
-            '⛅ Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/Kdramaland'),
+            'Aɴɪᴍᴇ Cʜɪᴅᴏʀɪ', url='https://t.me/AnimeChidori'),
         InlineKeyboardButton(
-            '🌨️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/SnowDevs')
+            'Oɴɢᴏɪɴɢ Aɴɪᴍᴇ', url='https://t.me/Ongoing_Aniime')
     ], [
-        InlineKeyboardButton('❄️ Aʙᴏᴜᴛ', callback_data='about'),
+        InlineKeyboardButton('🤖 Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('❗ Hᴇʟᴩ', callback_data='help')
     ]])
     if Config.START_PIC:
@@ -64,11 +64,11 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    '⛅ Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/Kdramaland'),
+                    'Aɴɪᴍᴇ Cʜɪᴅᴏʀɪ', url='https://t.me/AnimeChidori'),
                 InlineKeyboardButton(
-                    '🌨️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/SnowDevs')
+                    'Oɴɢᴏɪɴɢ Aɴɪᴍᴇ', url='https://t.me/Ongoing_Aniime')
             ], [
-                InlineKeyboardButton('❄️ Aʙᴏᴜᴛ', callback_data='about'),
+                InlineKeyboardButton('🤖 Aʙᴏᴜᴛ', callback_data='about'),
                 InlineKeyboardButton('❗ Hᴇʟᴩ', callback_data='help')
             ]])
         )
@@ -77,7 +77,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.HELP_TXT,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("❌ Cʟᴏꜱᴇ", callback_data="close"),
+                InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data="close"),
                 InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data="start")
             ]])
         )
@@ -86,7 +86,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.ABOUT_TXT.format(client.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("❌ Cʟᴏꜱᴇ", callback_data="close"),
+                InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data="close"),
                 InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data="start")
             ]])
         )
