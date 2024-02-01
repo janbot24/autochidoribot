@@ -30,13 +30,16 @@ class Config(object):
 class Txt(object):
     # part of text configuration
     START_TXT = """<b>Hᴇʟʟᴏ {} 👋,
-Tʜɪs ɪs ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴅ ʏᴇᴛ ᴘᴏᴡᴇʀғᴜʟ ʀᴇɴᴀᴍᴇ ʙᴏᴛ.
+
+<b>Tʜɪs ɪs ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴅ ʏᴇᴛ ᴘᴏᴡᴇʀғᴜʟ ʀᴇɴᴀᴍᴇ ʙᴏᴛ.
 Usɪɴɢ ᴛʜɪs ʙᴏᴛ ʏᴏᴜ ᴄᴀɴ ʀᴇɴᴀᴍᴇ ᴀɴᴅ ᴄʜᴀɴɢᴇ ᴛʜᴇ ᴛʜᴜᴍʙɴᴀɪʟ ᴏғ ʏᴏᴜʀ ғɪʟᴇ. Yᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴄᴏɴᴠᴇʀᴛ ᴠɪᴅᴇᴏ ᴛᴏ ғɪʟᴇ & ғɪʟᴇ ᴛᴏ ᴠɪᴅᴇᴏ. Tʜɪs ʙᴏᴛ ᴀʟsᴏ sᴜᴘᴘᴏʀᴛs ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴀɴᴅ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ
-"""
+
+⚡️Pʀᴇsᴇɴᴛᴇᴅ Bʏ - @Animemoviesr</b>"""
 
     ABOUT_TXT = """<b>🤖 My Name: {}
     
-    I am Developed for File Operation on Telegram.
+I am Developed for File Operation upto 2GB on Telegram.
+    
     ○ Developer: <a href='https://t.me/shidoteshika1'>This Person</a>
     ○ Founder of: <a href='https://t.me/animemoviesr'>This Channel</a>
     ○ Support Group: <a href='https://t.me/chatbox480'>Message Here</a>
