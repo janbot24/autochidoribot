@@ -18,13 +18,15 @@ async def start(client, message):
     await db.add_user(client, message)
     button = InlineKeyboardMarkup([[
         InlineKeyboardButton(
-            'Aɴɪᴍᴇ Cʜɪᴅᴏʀɪ', url='https://t.me/AnimeChidori'),
+            '○ Aɴɪᴍᴇ Cʜᴀɴɴᴇʟ ○', url='https://t.me/Animemoviesr'),
         InlineKeyboardButton(
-            'Oɴɢᴏɪɴɢ Aɴɪᴍᴇ', url='https://t.me/Ongoing_Aniime')
+            '○ Aɴɪᴍᴇ Gʀᴏᴜᴘ ○', url='https://t.me/ChatBox480')
     ], [
         InlineKeyboardButton('🤖 Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('❗ Hᴇʟᴩ', callback_data='help')
-    ]])
+    ],[
+                InlineKeyboardButton("🔒   Cʟᴏꜱᴇ   🔒", callback_data="close")
+            ]])
     if Config.START_PIC:
         await message.reply_photo(Config.START_PIC, caption=Txt.START_TXT.format(user.mention), reply_markup=button)
     else:
@@ -63,11 +65,11 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.START_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton(
-                    'Aɴɪᴍᴇ Cʜɪᴅᴏʀɪ', url='https://t.me/AnimeChidori'),
-                InlineKeyboardButton(
-                    'Oɴɢᴏɪɴɢ Aɴɪᴍᴇ', url='https://t.me/Ongoing_Aniime')
-            ], [
+        InlineKeyboardButton(
+            '○ Aɴɪᴍᴇ Cʜᴀɴɴᴇʟ ○', url='https://t.me/Animemoviesr'),
+        InlineKeyboardButton(
+            '○ Aɴɪᴍᴇ Gʀᴏᴜᴘ ○', url='https://t.me/ChatBox480')
+    ], [
                 InlineKeyboardButton('🤖 Aʙᴏᴜᴛ', callback_data='about'),
                 InlineKeyboardButton('❗ Hᴇʟᴩ', callback_data='help')
             ]])
@@ -86,6 +88,8 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.ABOUT_TXT.format(client.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton('⛩️ OUR OTHER CHANNELS ⛩️', url='https://t.me/animemoviesr/3171')
+            ],[
                 InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data="close"),
                 InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data="start")
             ]])
