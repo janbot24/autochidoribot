@@ -38,12 +38,11 @@ async def refunc(client, message):
         # Use a list to store the inline keyboard buttons
         button = [
             [InlineKeyboardButton(
-                "📁 Dᴏᴄᴜᴍᴇɴᴛ", callback_data="upload_document")]
+                "📁 Dᴏᴄᴜᴍᴇɴᴛ", callback_data="upload_document"),
+            InlineKeyboardButton(
+                "🎥 Vɪᴅᴇᴏ", callback_data="upload_video")]
         ]
-        if file.media in [MessageMediaType.VIDEO, MessageMediaType.DOCUMENT]:
-            button.same([InlineKeyboardButton(
-                "🎥 Vɪᴅᴇᴏ", callback_data="upload_video")])
-        elif file.media == MessageMediaType.AUDIO:
+        if file.media == MessageMediaType.AUDIO:
             button.append([InlineKeyboardButton(
                 "🎵 Aᴜᴅɪᴏ", callback_data="upload_audio")])
 
