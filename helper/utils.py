@@ -30,7 +30,7 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
             await message.edit(
                 text=f"{ud_type}\n\n{tmp}",
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("✖️ 𝙲𝙰𝙽𝙲𝙴𝙻 ✖️", callback_data="close")]]
+                    [[InlineKeyboardButton("✖️ CANCEL ✖️", callback_data="close")]]
                 ),
             )
         except:
@@ -39,8 +39,8 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
 
 def generate_progress_bar(percentage):
     return (
-        "".join(["🟢" for _ in range(math.floor(percentage / 5))])
-        + "".join(["🔴" for _ in range(20 - math.floor(percentage / 5))])
+        "".join(["▰" for _ in range(math.floor(percentage / 5))])
+        + "".join(["▱" for _ in range(20 - math.floor(percentage / 5))])
     )
 
 
