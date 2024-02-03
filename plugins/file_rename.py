@@ -41,7 +41,7 @@ async def refunc(client, message):
                 "📁 Dᴏᴄᴜᴍᴇɴᴛ", callback_data="upload_document")]
         ]
         if file.media in [MessageMediaType.VIDEO, MessageMediaType.DOCUMENT]:
-            button.append([InlineKeyboardButton(
+            button.same([InlineKeyboardButton(
                 "🎥 Vɪᴅᴇᴏ", callback_data="upload_video")])
         elif file.media == MessageMediaType.AUDIO:
             button.append([InlineKeyboardButton(
@@ -49,7 +49,7 @@ async def refunc(client, message):
 
         # Use a single call to reply with both text and inline keyboard
         await message.reply(
-            text=f"**Sᴇʟᴇᴄᴛ Tʜᴇ Oᴜᴛᴩᴜᴛ Fɪʟᴇ Tyᴩᴇ**\n**• Fɪʟᴇ Nᴀᴍᴇ :-** `{new_name}`",
+            text=f"**Sᴇʟᴇᴄᴛ Tʜᴇ Oᴜᴛᴩᴜᴛ Fɪʟᴇ Tyᴩᴇ**\n\n**• Fɪʟᴇ Nᴀᴍᴇ :-** `{new_name}`",
             reply_to_message_id=file.id,
             reply_markup=InlineKeyboardMarkup(button)
         )
@@ -85,9 +85,9 @@ async def doc(bot, update):
     file_path = f"downloads/{new_filename}"
     file = update.message.reply_to_message
 
-    ms = await update.message.edit("❗ **Please wait...**\n\n**Tʀyɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅɪɴɢ...**")
+    ms = await update.message.edit("**Tʀyɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅɪɴɢ...**")
     try:
-        path = await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram, progress_args=("\n❗ **Please wait...**\n⚡ **Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+        path = await bot.download_media(message=file, file_name=file_path, progress=progress_for_pyrogram, progress_args=("⚡ **Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
     except Exception as e:
         return await ms.edit(e)
 
@@ -122,7 +122,7 @@ async def doc(bot, update):
         img.resize((320, 320))
         img.save(ph_path, "JPEG")
 
-    await ms.edit("❗ **Please wait...**\n\n**📲 Tʀyɪɴɢ Tᴏ Uᴩʟᴏᴀᴅɪɴɢ...**")
+    await ms.edit("**➪ Tʀyɪɴɢ Tᴏ Uᴩʟᴏᴀᴅɪɴɢ...**")
     type = update.data.split("_")[1]
     try:
         if type == "document":
@@ -132,7 +132,7 @@ async def doc(bot, update):
                 thumb=ph_path,
                 caption=caption,
                 progress=progress_for_pyrogram,
-                progress_args=("❗ **Please wait...**\n⚡ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+                progress_args=("⚡ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
         elif type == "video":
             await bot.send_video(
                 update.message.chat.id,
@@ -141,7 +141,7 @@ async def doc(bot, update):
                 thumb=ph_path,
                 duration=duration,
                 progress=progress_for_pyrogram,
-                progress_args=("❗ **Please wait...**\n⚡ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+                progress_args=("⚡ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
         elif type == "audio":
             await bot.send_audio(
                 update.message.chat.id,
@@ -150,7 +150,7 @@ async def doc(bot, update):
                 thumb=ph_path,
                 duration=duration,
                 progress=progress_for_pyrogram,
-                progress_args=("❗ **Please wait...**\n⚡ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+                progress_args=("⚡ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
     except Exception as e:
         os.remove(file_path)
         if ph_path:
