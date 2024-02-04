@@ -18,7 +18,7 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
         )
 
         progress = generate_progress_bar(percentage)
-        tmp = progress + Txt.PROGRESS_BAR.format(
+        tmp = progress+Txt.PROGRESS_BAR.format(
             round(percentage, 2),
             humanbytes(current),
             humanbytes(total),
