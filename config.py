@@ -47,25 +47,27 @@ I am Developed for File Operation upto 2GB on Telegram.
       My Database, Library, Server, Source Codes details are Restricted by my Owner.If you want to know then ask My Owner: @Shidoteshika1</b>"""
 
     HELP_TXT = """
-🌌 <b><u>How to Set Thumbnile</u></b>
+🌌 <b>HOW TO SET THUMBNILE</b>
   
-<b>•></b> /start Tʜᴇ Bᴏᴛ Aɴᴅ Sᴇɴᴅ Aɴy Pʜᴏᴛᴏ Tᴏ Aᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟy Sᴇᴛ Tʜᴜᴍʙɴɪʟᴇ.
-<b>•></b> /del_thumb - Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Dᴇʟᴇᴛᴇ Yᴏᴜʀ Oʟᴅ Tʜᴜᴍʙɴɪʟᴇ.
-<b>•></b> /view_thumb - Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Vɪᴇᴡ Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Tʜᴜᴍʙɴɪʟᴇ.
+‣ /start the BOT and send any photo to automatically set thumbnile
+‣ /del_thumb - Delete your old thumnile
+‣ /view_thumb - View your current thumnile
 
+📑 <b>HOW TO SET CUSTOM CAPTION</b>
 
-📑 <b><u>How to Set Custom Caption</u></b>
+‣ /set_caption - Set a custom caption
+‣ /see_caption - View your custom aption
+‣ /del_caption - Delete your custom caption
 
-<b>•></b> /set_caption - Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Sᴇᴛ ᴀ Cᴜꜱᴛᴏᴍ Cᴀᴩᴛɪᴏɴ
-<b>•></b> /see_caption - Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Vɪᴇᴡ Yᴏᴜʀ Cᴜꜱᴛᴏᴍ Cᴀᴩᴛɪᴏɴ
-<b>•></b> /del_caption - Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Dᴇʟᴇᴛᴇ Yᴏᴜʀ Cᴜꜱᴛᴏᴍ Cᴀᴩᴛɪᴏɴ
-Exᴀᴍᴩʟᴇ:- /set_caption `📕 Fɪʟᴇ Nᴀᴍᴇ: {filename}
+Example:- /set_caption `📕 Fɪʟᴇ Nᴀᴍᴇ: {filename}
 💾 Sɪᴢᴇ: {filesize}
 ⏰ Dᴜʀᴀᴛɪᴏɴ: {duration}`
 
-✏️ <b><u>How to Reaname a file</u></b>
+✏️ <b>HOW TO RENAME A FILE</b>
 
-Sᴇɴᴅ Aɴy Fɪʟᴇ Aɴᴅ Tyᴩᴇ Nᴇᴡ Fɪʟᴇ Nᴀᴍᴇ \nAɴᴅ Sᴇʟᴇᴄᴛ Tʜᴇ Fᴏʀᴍᴀᴛ [ document, video, audio ].
+‣ <new_file_name>.<extension>
+Send any file and type new file name \nAnd select the format [ document, video, audio ].
+Example:- `E01 Solo Leveling (480p) ESUB [∞].mkv`
 """
 
 
