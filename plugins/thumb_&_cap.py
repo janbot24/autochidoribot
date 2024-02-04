@@ -49,3 +49,8 @@ async def addthumbs(client, message):
     SnowDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
     await db.set_thumbnail(message.from_user.id, file_id=message.photo.file_id)
     await SnowDev.edit("✅️ **Tʜᴜᴍʙɴᴀɪʟ Sᴀᴠᴇᴅ**")
+
+@Client.on_message(filters.private & filters.command('hey'))
+async def hey(client, message):
+        await message.reply_text(f"**Hello How can I assist you!\nIf you need more info click: /start**")
+    
