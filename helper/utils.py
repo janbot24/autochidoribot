@@ -62,24 +62,32 @@ def humanbytes(size):
         n += 1
     return f"{round(size, 2)} {Dic_powerN[n]}ʙ"
 
+# Another method of Timeformatter
+#tmp = (
+ #       (f"{days}ᴅ, ") if days else ""
+ #   ) + (
+ #       (f"{hours}ʜ, ") if hours else ""
+ #   ) + (
+ #       (f"{minutes}ᴍ, ") if minutes else ""
+ #   ) + (
+ #      (f"{seconds}ꜱ, ") if seconds else ""
+ #   ) + (
+ #       (f"{milliseconds}ᴍꜱ, ") if milliseconds else ""
+ #   )
+ #  return tmp[:-2] 
+
 
 def TimeFormatter(milliseconds: int) -> str:
     seconds, milliseconds = divmod(int(milliseconds), 1000)
     minutes, seconds = divmod(seconds, 60)
     hours, minutes = divmod(minutes, 60)
     days, hours = divmod(hours, 24)
-    tmp = (
-        (f"{days}ᴅ, ") if days else ""
-    ) + (
-        (f"{hours}ʜ, ") if hours else ""
-    ) + (
-        (f"{minutes}ᴍ, ") if minutes else ""
-    ) + (
-        (f"{seconds}ꜱ, ") if seconds else ""
-    ) + (
-        (f"{milliseconds}ᴍꜱ, ") if milliseconds else ""
-    )
-    return tmp[:-2]
+    tmp = ((str(days) + "ᴅ, ") if days else "") + \
+        ((str(hours) + "ʜ, ") if hours else "") + \
+        ((str(minutes) + "ᴍ, ") if minutes else "") + \
+        ((str(seconds) + "ꜱ, ") if seconds else "") + \
+        ((str(milliseconds) + "ᴍꜱ, ") if milliseconds else "")
+    return tmp[:-2] 
 
 
 def convert(seconds):
