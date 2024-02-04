@@ -79,5 +79,7 @@ Example:- `E01 Solo Leveling (480p) ESUB [∞].mkv`
 ‣ ⏳️ Dᴏɴᴇ : {0}%
 ‣ 🚀 Sᴩᴇᴇᴅ: {3}/s
 ‣ ⏰️ Eᴛᴀ: {4}
-
-⚡️Pᴏᴡᴇʀᴇᴅ Bʏ - @Animemoviesr</b>"""
+</b>
+```RENAMED FILE:
+{new_filename}```
+<b>⚡️Pᴏᴡᴇʀᴇᴅ Bʏ - @Animemoviesr</b>"""
