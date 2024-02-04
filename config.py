@@ -75,4 +75,5 @@ Sᴇɴᴅ Aɴy Fɪʟᴇ Aɴᴅ Tyᴩᴇ Nᴇᴡ Fɪʟᴇ Nᴀᴍᴇ \nAɴᴅ S�
 ‣ ⏳️ Dᴏɴᴇ : {0}%
 ‣ 🚀 Sᴩᴇᴇᴅ: {3}/s
 ‣ ⏰️ Eᴛᴀ: {4}
-</b>\n<a href='https://t.me/ChatBox480'>𝗠𝗔𝗜𝗡 𝗖𝗛𝗔𝗧 𝗚𝗥𝗢𝗨</a>"""
+
+⚡️Pᴏᴡᴇʀᴇᴅ Bʏ - @Animemoviesr</b>"""
