@@ -76,4 +76,4 @@ Sᴇɴᴅ Aɴy Fɪʟᴇ Aɴᴅ Tyᴩᴇ Nᴇᴡ Fɪʟᴇ Nᴀᴍᴇ \nAɴᴅ S�
 ‣ 🚀 Sᴩᴇᴇᴅ: {3}/s
 ‣ ⏰️ Eᴛᴀ: {4}
 
-```<a herf='https://t.me/ChatBox480'>𝗠𝗔𝗜𝗡 𝗖𝗛𝗔𝗧 𝗚𝗥𝗢𝗨</a></b>```"""
+```<a href='https://t.me/ChatBox480'>𝗠𝗔𝗜𝗡 𝗖𝗛𝗔𝗧 𝗚𝗥𝗢𝗨</a></b>```"""
