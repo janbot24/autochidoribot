@@ -38,13 +38,14 @@ Usɪɴɢ ᴛʜɪs ʙᴏᴛ ʏᴏᴜ ᴄᴀɴ ʀᴇɴᴀᴍᴇ ᴀɴᴅ ᴄʜᴀ�
 
     ABOUT_TXT = """<b>🤖 My Name: {}
     
-I am Developed for File Operation upto 2GB on Telegram.
-    
-    ○ Developer: <a href='https://t.me/shidoteshika1'>This Person</a>
-    ○ Founder of: <a href='https://t.me/animemoviesr'>This Channel</a>
-    ○ Support Group: <a href='https://t.me/chatbox480'>Message Here</a>
-    
-      My Database, Library, Server, Source Codes details are Restricted by my Owner.If you want to know then ask My Owner: @Shidoteshika1</b>"""
+I ᴀᴍ Dᴇᴠᴇʟᴏᴘᴇᴅ ғᴏʀ Fɪʟᴇ Oᴘᴇʀᴀᴛɪᴏɴ ᴜᴘᴛᴏ 𝟸GB ᴏɴ Tᴇʟᴇɢʀᴀᴍ.</b>
+```BOT CONFIGURATION
+○ Dᴏᴡɴʟᴏᴀᴅ Sᴘᴇᴇᴅ : 3-4 MB/s
+○ Uᴘʟᴏᴀᴅ Sᴘᴇᴇᴅ : 3-4 MB/s
+○ Pᴀʀᴀʟʟᴇʟ Pʀᴏᴄᴇss : Only 01
+○ Usᴇʀ Tʏᴘᴇ : FREE
+○ Tᴀsᴋ Hᴀɴᴅʟɪɴɢ : Smoothly < 800MB```
+    <b>Mʏ Dᴀᴛᴀʙᴀsᴇ, Lɪʙʀᴀʀʏ, Sᴇʀᴠᴇʀ, Sᴏᴜʀᴄᴇ Cᴏᴅᴇs ᴅᴇᴛᴀɪʟs ᴀʀᴇ Rᴇsᴛʀɪᴄᴛᴇᴅ ʙʏ ᴍʏ Oᴡɴᴇʀ.Iғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇɴ ᴀsᴋ Mʏ Oᴡɴᴇʀ: @Shidoteshika1</b>"""
 
     HELP_TXT = """
 🌌 <b>HOW TO SET THUMBNILE</b>
