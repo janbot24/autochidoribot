@@ -13,7 +13,7 @@ import time
 @Client.on_callback_query(filters.regex('rename'))
 async def rename(bot, update):
     await update.message.delete()
-    await update.message.reply_text("```Pʟᴇᴀsᴇ Eɴᴛᴇʀ Nᴇᴡ Fɪʟᴇ Nᴀᴍᴇ...```",
+    await update.message.reply_text("<b>Pʟᴇᴀsᴇ Eɴᴛᴇʀ Nᴇᴡ Fɪʟᴇ Nᴀᴍᴇ...</b>",
                                     reply_to_message_id=update.message.reply_to_message.id,
                                     reply_markup=ForceReply(True))
 
