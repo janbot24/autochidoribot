@@ -90,7 +90,12 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.ABOUT_TXT.format(client.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton('⛩️ OUR OTHER CHANNELS ⛩️', url='https://t.me/animemoviesr/3171')
+                InlineKeyboardButton('👨‍💻 Developer 👨‍💻', url='https://t.me/Shidoteshika1')
+            ],[
+                InlineKeyboardButton('☃️ Founder of', url='https://t.me/Animemoviesr'),
+                InlineKeyboardButton('❄️ Support Group', url='https://t.me/ChatBox480')
+            ],[
+                InlineKeyboardButton('⛩️ OUR OTHER CHANNELS ⛩️', url='https://t.me/Animemoviesr/3171')
             ],[
                 InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data="close"),
                 InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data="start")
