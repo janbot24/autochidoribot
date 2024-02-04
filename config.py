@@ -50,14 +50,14 @@ I am Developed for File Operation upto 2GB on Telegram.
 🌌 <b>HOW TO SET THUMBNILE</b>
   
 ‣ /start the BOT and send any photo to automatically set thumbnile
-‣ /del_thumb - Delete your old thumnile
-‣ /view_thumb - View your current thumnile
+‣ /del_thumb - Delete your old thumbnile
+‣ /view_thumb - View your current thumbnile
 
 📑 <b>HOW TO SET CUSTOM CAPTION</b>
 
 ‣ /set_caption - Set a custom caption
-‣ /see_caption - View your custom aption
-‣ /del_caption - Delete your custom caption
+‣ /see_caption - View your caption
+‣ /del_caption - Delete your caption
 
 Example:- /set_caption `📕 Fɪʟᴇ Nᴀᴍᴇ: {filename}
 💾 Sɪᴢᴇ: {filesize}
@@ -65,8 +65,9 @@ Example:- /set_caption `📕 Fɪʟᴇ Nᴀᴍᴇ: {filename}
 
 ✏️ <b>HOW TO RENAME A FILE</b>
 
-‣ <new_file_name>.<extension>
+‣ new_file_name.extension
 Send any file and type new file name \nAnd select the format [ document, video, audio ].
+
 Example:- `E01 Solo Leveling (480p) ESUB [∞].mkv`
 """
 
