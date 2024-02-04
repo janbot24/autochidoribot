@@ -39,22 +39,22 @@ Usɪɴɢ ᴛʜɪs ʙᴏᴛ ʏᴏᴜ ᴄᴀɴ ʀᴇɴᴀᴍᴇ ᴀɴᴅ ᴄʜᴀ�
     ABOUT_TXT = """<b>🤖 My Name: {}
     
 I ᴀᴍ Dᴇᴠᴇʟᴏᴘᴇᴅ ғᴏʀ Fɪʟᴇ Oᴘᴇʀᴀᴛɪᴏɴ ᴜᴘᴛᴏ 𝟸GB ᴏɴ Tᴇʟᴇɢʀᴀᴍ.</b>
-```BOT CONFIGURATION
-○ Dᴏᴡɴʟᴏᴀᴅ Sᴘᴇᴇᴅ : 3-4 MB/s
-○ Uᴘʟᴏᴀᴅ Sᴘᴇᴇᴅ : 3-4 MB/s
-○ Pᴀʀᴀʟʟᴇʟ Pʀᴏᴄᴇss : Only 01
-○ Usᴇʀ Tʏᴘᴇ : FREE
-○ Tᴀsᴋ Hᴀɴᴅʟɪɴɢ : Smoothly < 800MB```
+<b><u>BOT CONFIGURATION</u>:-</b>
+<b>○ Dᴏᴡɴʟᴏᴀᴅ Sᴘᴇᴇᴅ :</b> 3-4 MB/s
+<b>○ Uᴘʟᴏᴀᴅ Sᴘᴇᴇᴅ :</b> 3-4 MB/s
+<b>○ Pᴀʀᴀʟʟᴇʟ Pʀᴏᴄᴇss :</b> Only 01
+<b>○ Usᴇʀ Tʏᴘᴇ :</b> FREE
+<b>○ Tᴀsᴋ Hᴀɴᴅʟɪɴɢ :<b> Smoothly < 800MB
     <b>Mʏ Dᴀᴛᴀʙᴀsᴇ, Lɪʙʀᴀʀʏ, Sᴇʀᴠᴇʀ, Sᴏᴜʀᴄᴇ Cᴏᴅᴇs ᴅᴇᴛᴀɪʟs ᴀʀᴇ Rᴇsᴛʀɪᴄᴛᴇᴅ ʙʏ ᴍʏ Oᴡɴᴇʀ.Iғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇɴ ᴀsᴋ Mʏ Oᴡɴᴇʀ: @Shidoteshika1</b>"""
 
     HELP_TXT = """
-🌌 <b>HOW TO SET THUMBNILE</b>
+🌌 <b><u>HOW TO SET THUMBNILE</u></b>
   
 ‣ /start the BOT and send any photo to automatically set thumbnile
 ‣ /del_thumb - Delete your old thumbnile
 ‣ /view_thumb - View your current thumbnile
 
-📑 <b>HOW TO SET CUSTOM CAPTION</b>
+📑 <b><u>HOW TO SET CUSTOM CAPTION</u></b>
 
 ‣ /set_caption - Set a custom caption
 ‣ /see_caption - View your caption
@@ -64,11 +64,10 @@ Example:- /set_caption `📕 Fɪʟᴇ Nᴀᴍᴇ: {filename}
 💾 Sɪᴢᴇ: {filesize}
 ⏰ Dᴜʀᴀᴛɪᴏɴ: {duration}`
 
-✏️ <b>HOW TO RENAME A FILE</b>
+✏️ <b><u>HOW TO RENAME A FILE</u></b>
 
 ‣ new_file_name.extension
 Send any file and type new file name \nAnd select the format [ document, video, audio ].
-
 Example:- `E01 Solo Leveling (480p) ESUB [∞].mkv`
 """
 
