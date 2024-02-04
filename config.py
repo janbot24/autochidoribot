@@ -73,13 +73,12 @@ Example:- `E01 Solo Leveling (480p) ESUB [∞].mkv`
 """
 
 
-    PROGRESS_BAR = """<b>
+    PROGRESS_BAR = f"""<b>
     
 ‣ 🗃️ Sɪᴢᴇ: {1} | {2}
 ‣ ⏳️ Dᴏɴᴇ : {0}%
 ‣ 🚀 Sᴩᴇᴇᴅ: {3}/s
 ‣ ⏰️ Eᴛᴀ: {4}
 </b>
-```RENAMED FILE:
-{new_filename}```
-<b>⚡️Pᴏᴡᴇʀᴇᴅ Bʏ - @Animemoviesr</b>"""
+```RENAMED FILE:\n{new_filename}```
+**⚡️Pᴏᴡᴇʀᴇᴅ Bʏ - @Animemoviesr**"""
