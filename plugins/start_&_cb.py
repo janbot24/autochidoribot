@@ -92,11 +92,6 @@ async def cb_handler(client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton('👨‍💻 Developer 👨‍💻', url='https://t.me/Shidoteshika1')
             ],[
-                InlineKeyboardButton('☃️ Founder of', url='https://t.me/Animemoviesr'),
-                InlineKeyboardButton('❄️ Support Group', url='https://t.me/ChatBox480')
-            ],[
-                InlineKeyboardButton('⛩️ OUR OTHER CHANNELS ⛩️', url='https://t.me/Animemoviesr/3171')
-            ],[
                 InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data="close"),
                 InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data="start")
             ]])
