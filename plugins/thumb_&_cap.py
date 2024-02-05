@@ -50,7 +50,7 @@ async def addthumbs(client, message):
     await db.set_thumbnail(message.from_user.id, file_id=message.photo.file_id)
     await SnowDev.edit("✅️ **Tʜᴜᴍʙɴᴀɪʟ Sᴀᴠᴇᴅ**")
 
-@Client.on_message(filters.private & filters.command('hey'))
+@Client.on_message(filters.private & filters.command('autorename'))
 async def hey(client, message):
-        await message.reply_text(f"**Hello How can I assist you!\nIf you need more info click: /start**")
+        await message.reply_text(f"**Aᴜᴛᴏ ʀᴇɴᴀᴍᴇ ғᴏʀᴍᴀᴛ ᴜᴘᴅᴀᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ! ✅️\n😎🧖**")
     
