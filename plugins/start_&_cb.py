@@ -14,7 +14,8 @@ async def start(client, message):
         await message.reply_text("Sorry, You are banned.")
         return
 
-    SnowDev = await message.reply_text("🌟", reply_to_message_id=message.id)
+    SnowDev = await message.reply_text("🌟")
+    await query.message.delete()
 
     user = message.from_user
     await db.add_user(client, message)
