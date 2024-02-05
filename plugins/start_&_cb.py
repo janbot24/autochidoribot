@@ -14,15 +14,13 @@ async def start(client, message):
         await message.reply_text("Sorry, You are banned.")
         return
 
-    SnowDev = await message.reply_text("🌟")
-
     user = message.from_user
     await db.add_user(client, message)
     button = InlineKeyboardMarkup([[
         InlineKeyboardButton(
-            '○ Aɴɪᴍᴇ Cʜᴀɴɴᴇʟ ○', url='https://t.me/Animemoviesr'),
+            '○ Aɴɪᴍᴇ Cʜɪᴅᴏʀɪ ○', url='https://t.me/AnimeChidori'),
         InlineKeyboardButton(
-            '○ Aɴɪᴍᴇ Gʀᴏᴜᴘ ○', url='https://t.me/ChatBox480')
+            '○ Oɴɢᴏɪɴɢ Aɴɪᴍᴇ ○', url='https://t.me/Ongoing_Aniime')
     ], [
         InlineKeyboardButton('🤖 Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('❗ Hᴇʟᴩ', callback_data='help')
