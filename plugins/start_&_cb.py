@@ -15,8 +15,6 @@ async def start(client, message):
         return
 
     SnowDev = await message.reply_text("🌟")
-    await query.message.delete()
-    await query.message.continue_propagation()
 
     user = message.from_user
     await db.add_user(client, message)
