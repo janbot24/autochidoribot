@@ -33,6 +33,7 @@ class Txt(object):
 
 <b>Tʜɪs ɪs ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴅ ʏᴇᴛ ᴘᴏᴡᴇʀғᴜʟ ʀᴇɴᴀᴍᴇ ʙᴏᴛ.
 Usɪɴɢ ᴛʜɪs ʙᴏᴛ ʏᴏᴜ ᴄᴀɴ ʀᴇɴᴀᴍᴇ ᴀɴᴅ ᴄʜᴀɴɢᴇ ᴛʜᴇ ᴛʜᴜᴍʙɴᴀɪʟ ᴏғ ʏᴏᴜʀ ғɪʟᴇ. Yᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴄᴏɴᴠᴇʀᴛ ᴠɪᴅᴇᴏ ᴛᴏ ғɪʟᴇ & ғɪʟᴇ ᴛᴏ ᴠɪᴅᴇᴏ. Tʜɪs ʙᴏᴛ ᴀʟsᴏ sᴜᴘᴘᴏʀᴛs ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴀɴᴅ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ
+Iᴛ ᴀʟsᴏ sᴜᴘᴘᴏʀᴛ Aᴜᴛᴏ Rᴇɴᴀᴍᴇ.
 
 ⚡️Pʀᴇsᴇɴᴛᴇᴅ Bʏ - @Uchiha_x_Clan</b>"""
 
@@ -64,6 +65,10 @@ Example:- /set_caption `📕 Fɪʟᴇ Nᴀᴍᴇ: {filename}
 ‣ new_file_name.extension
 Send any file and type new file name \nAnd select the format [ document, video, audio ].
 Example:- `E01 Solo Leveling (480p) ESUB @AnimeChidori.mkv`
+
+<b><u>AUTO RENAME OPTION</u>:</b>
+‣ /autorename {formatt}
+Example:- `/autorename EP  Solo Leveling () ESUB @AnimeChidori`
 """
 
 
