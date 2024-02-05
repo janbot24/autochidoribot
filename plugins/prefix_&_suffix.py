@@ -6,7 +6,7 @@ from helper.database import db
 async def add_caption(client, message):
 
     if len(message.command) == 1:
-        return await message.reply_text("**Give The Prefix\n\nExᴀᴍᴩʟᴇ:- `/set_prefix @Animemoviesr`**")
+        return await message.reply_text("**Give The Prefix\n\nExᴀᴍᴩʟᴇ:- `/set_prefix @AnimeChidori`**")
     prefix = message.text.split(" ", 1)[1]
     SnowDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
     await db.set_prefix(message.from_user.id, prefix)
@@ -40,7 +40,7 @@ async def see_caption(client, message):
 async def add_csuffix(client, message):
 
     if len(message.command) == 1:
-        return await message.reply_text("**Give The Suffix\n\nExᴀᴍᴩʟᴇ:- `/set_suffix @Animemoviesr`**")
+        return await message.reply_text("**Give The Suffix\n\nExᴀᴍᴩʟᴇ:- `/set_suffix @AnimeChidori`**")
     suffix = message.text.split(" ", 1)[1]
     SnowDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
     await db.set_suffix(message.from_user.id, suffix)
