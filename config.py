@@ -31,17 +31,18 @@ class Txt(object):
     # part of text configuration
     START_TXT = """<b>Hᴇʟʟᴏ {} 👋,
 
-<b>Tʜɪs ɪs ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴅ ʏᴇᴛ ᴘᴏᴡᴇʀғᴜʟ ʀᴇɴᴀᴍᴇ ʙᴏᴛ.
-Usɪɴɢ ᴛʜɪs ʙᴏᴛ ʏᴏᴜ ᴄᴀɴ ʀᴇɴᴀᴍᴇ ᴀɴᴅ ᴄʜᴀɴɢᴇ ᴛʜᴇ ᴛʜᴜᴍʙɴᴀɪʟ ᴏғ ʏᴏᴜʀ ғɪʟᴇ. Yᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴄᴏɴᴠᴇʀᴛ ᴠɪᴅᴇᴏ ᴛᴏ ғɪʟᴇ & ғɪʟᴇ ᴛᴏ ᴠɪᴅᴇᴏ. Tʜɪs ʙᴏᴛ ᴀʟsᴏ sᴜᴘᴘᴏʀᴛs ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴀɴᴅ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ
-Iᴛ ᴀʟsᴏ sᴜᴘᴘᴏʀᴛ Aᴜᴛᴏ Rᴇɴᴀᴍᴇ.
+<b>Tʜɪs ɪs ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ... nah man, 😂 i don't think i should
+tell you the work of a rename bot , but if you're new to the 
+process,... 😂ask your friends 
 
-⚡️Pʀᴇsᴇɴᴛᴇᴅ Bʏ - @Uchiha_x_Clan</b>"""
+
+⚡️Pʀᴇsᴇɴᴛᴇᴅ Bʏ - @notmoviebuff</b>"""
 
     ABOUT_TXT = """<b>🤖 My Name: {}
     
 I ᴀᴍ Dᴇᴠᴇʟᴏᴘᴇᴅ ғᴏʀ Fɪʟᴇ Oᴘᴇʀᴀᴛɪᴏɴ ᴜᴘᴛᴏ 𝟸GB ᴏɴ Tᴇʟᴇɢʀᴀᴍ.</b>
 
-    <b>Mʏ Dᴀᴛᴀʙᴀsᴇ, Lɪʙʀᴀʀʏ, Sᴇʀᴠᴇʀ, Sᴏᴜʀᴄᴇ Cᴏᴅᴇs ᴅᴇᴛᴀɪʟs ᴀʀᴇ Rᴇsᴛʀɪᴄᴛᴇᴅ ʙʏ ᴍʏ Oᴡɴᴇʀ.Iғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇɴ ᴀsᴋ Mʏ Oᴡɴᴇʀ: @Notanimechidori</b>"""
+    <b>Mʏ Dᴀᴛᴀʙᴀsᴇ, Lɪʙʀᴀʀʏ, Sᴇʀᴠᴇʀ, Sᴏᴜʀᴄᴇ Cᴏᴅᴇs ᴅᴇᴛᴀɪʟs ᴀʀᴇ Rᴇsᴛʀɪᴄᴛᴇᴅ ʙʏ ᴍʏ Oᴡɴᴇʀ.Iғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇɴ ᴀsᴋ Mʏ Oᴡɴᴇʀ: @notmoviebuff</b>"""
 
     HELP_TXT = """
 🌌 <b><u>HOW TO SET THUMBNILE</u></b>
@@ -79,4 +80,4 @@ Example:- `/autorename EP  Solo Leveling () ESUB @AnimeChidori`
 ‣ 🚀 Sᴩᴇᴇᴅ: {3}/s
 ‣ ⏰️ Eᴛᴀ: {4}
 
-⚡️Pᴏᴡᴇʀᴇᴅ Bʏ - @Uchiha_x_Clan</b>"""
+⚡️Pᴏᴡᴇʀᴇᴅ Bʏ - @the_moviebuff_tv</b>"""
